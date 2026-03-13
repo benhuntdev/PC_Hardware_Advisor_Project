@@ -304,7 +304,7 @@ ChromaDB with OpenAI embeddings finds relevant content even when wording differs
 
 ## Author
 
-**[Your Name]**
+**Benjamin Hunt**
 Ironhack AI Engineering Bootcamp — March 2026
 
 ---
