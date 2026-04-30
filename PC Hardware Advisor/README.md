@@ -54,9 +54,7 @@ The advisor covers a wide range of hardware needs:
 
 ### Full Walkthrough Video
 
-[![PC Hardware Advisor - Full Demo](https://cdn.loom.com/sessions/thumbnails/8293d333ed014db49a561494f451f396-with-play.gif)](https://www.loom.com/share/8293d333ed014db49a561494f451f396)
-
-> Click the image above to watch the full demo on Loom.
+🎬 **[Watch the full demo on Loom](https://www.loom.com/share/8293d333ed014db49a561494f451f396)**
 
 ---
 
