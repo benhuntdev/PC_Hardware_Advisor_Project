@@ -42,11 +42,11 @@ It doesn't just recommend - it **builds with you**. A guided PC configurator ask
 
 The advisor covers a wide range of hardware needs:
 
-| ![PCs](assets/images/pcs.png) | ![MacBooks](assets/images/macbooks.png) | ![Monitors](assets/images/monitors.png) |
+| ![PCs](assets/images/Build%20pcs.png) | ![MacBooks](assets/images/Macbooks.png) | ![Monitors](assets/images/Monitors.png) |
 |:---:|:---:|:---:|
 | Custom PC Builds | MacBooks | Monitors |
 
-![Chatbot Home](assets/images/chatbot_home.png)
+![Chatbot Home](assets/images/PC%20Hardware%20Advisor%20Chatbot.png)
 
 ---
 
@@ -70,7 +70,7 @@ The following clips walk through the core user journey, from telling the advisor
 
 Users simply describe what they are looking for in natural language - budget, use case, preferences. No forms, no dropdowns. The advisor handles the rest.
 
-![User defines hardware build](assets/gifs/User_define_hardware_builds.gif)
+![User defines hardware build](assets/gifs/Userdefinehardwarebuilds.gif)
 
 ---
 
@@ -78,7 +78,7 @@ Users simply describe what they are looking for in natural language - budget, us
 
 The advisor returns one to four complete builds tailored to the user's input. Every build has been automatically checked for component compatibility (socket, RAM type, GPU clearance, PSU wattage) and benchmarked against best-fit options for the stated use case.
 
-![Compare builds](assets/gifs/compare_builds.gif)
+![Compare builds](assets/gifs/comparebuilds.gif)
 
 ---
 
@@ -86,7 +86,7 @@ The advisor returns one to four complete builds tailored to the user's input. Ev
 
 Not happy with a specific component? Users can swap out any part in any build. The advisor presents curated alternatives with full specs and compatibility already verified.
 
-![Pick your PC parts](assets/gifs/Pick_Your_PC_Parts.gif)
+![Pick your PC parts](assets/gifs/PickYourPCParts.gif)
 
 ---
 
@@ -94,7 +94,7 @@ Not happy with a specific component? Users can swap out any part in any build. T
 
 When the user is happy with their chosen build, they simply type **"buy my build"** (or select the option when prompted). Direct purchase links to trusted retailers are generated on the spot.
 
-![Buy your build](assets/gifs/Buy_Your_Build.gif)
+![Buy your build](assets/gifs/BuyYourBuild.gif)
 
 ---
 
@@ -184,15 +184,15 @@ pc-hardware-advisor/
 │
 ├── assets/                      # README media
 │   ├── gifs/
-│   │   ├── User_define_hardware_builds.gif
-│   │   ├── compare_builds.gif
-│   │   ├── Pick_Your_PC_Parts.gif
-│   │   └── Buy_Your_Build.gif
+│   │   ├── Userdefinehardwarebuilds.gif
+│   │   ├── comparebuilds.gif
+│   │   ├── PickYourPCParts.gif
+│   │   └── BuyYourBuild.gif
 │   └── images/
-│       ├── pcs.png
-│       ├── macbooks.png
-│       ├── monitors.png
-│       └── chatbot_home.png
+│       ├── PC Hardware Advisor Chatbot.png
+│       ├── Monitors.png
+│       ├── Macbooks.png
+│       └── Build pcs.png
 │
 ├── data/                        # Chunked transcript CSVs
 │   ├── gpu_reviews_chunked.csv
