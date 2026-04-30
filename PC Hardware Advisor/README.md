@@ -1,6 +1,6 @@
-# 🖥️ PC Hardware Advisor — AI Agent
+# 🖥️ PC Hardware Advisor - AI Agent
 
-> **Ironhack AI Engineering Bootcamp 2026 — Final Project**
+> **Ironhack AI Engineering Bootcamp 2026 - Final Project**
 
 An AI-powered PC hardware advisor that replaces hours of YouTube research with a single conversation. Built with LangChain, ChromaDB, OpenAI, and a React frontend.
 
@@ -11,11 +11,14 @@ An AI-powered PC hardware advisor that replaces hours of YouTube research with a
 ![React](https://img.shields.io/badge/Frontend-React-61DAFB?logo=react&logoColor=black)
 ![FastAPI](https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white)
 
+> ⚠️ **Work in Progress** - This is a functional prototype built as a bootcamp final project. Known bugs exist and the experience is actively being refined. See [Roadmap](#roadmap) for planned improvements.
+
 ---
 
 ## 📋 Table of Contents
 
 - [Overview](#overview)
+- [Demo](#demo)
 - [Features](#features)
 - [Architecture](#architecture)
 - [Tech Stack](#tech-stack)
@@ -24,7 +27,7 @@ An AI-powered PC hardware advisor that replaces hours of YouTube research with a
 - [Usage](#usage)
 - [Evaluation](#evaluation)
 - [Key Technical Decisions](#key-technical-decisions)
-- [Demo](#demo)
+- [Roadmap](#roadmap)
 - [Author](#author)
 
 ---
@@ -35,7 +38,63 @@ An AI-powered PC hardware advisor that replaces hours of YouTube research with a
 
 **The Solution:** PC Hardware Advisor is a RAG-based AI agent that has indexed **1,400+ YouTube hardware reviews** (36,489 searchable chunks) and can answer any PC hardware question with timestamped evidence from real reviewers.
 
-It doesn't just recommend — it **builds with you**. A guided PC configurator asks 9 questions, then generates 1–4 complete builds with full specs, pricing, compatibility checks, and direct buy links.
+It doesn't just recommend - it **builds with you**. A guided PC configurator asks 9 questions, then generates 1 to 4 complete builds with full specs, pricing, compatibility checks, and direct buy links.
+
+The advisor covers a wide range of hardware needs:
+
+| ![PCs](https://drive.google.com/uc?export=view&id=1P1TX_SDHMHwppCMpvSgHRdAEQG0TowL4) | ![MacBooks](https://drive.google.com/uc?export=view&id=1Y5qjwe4aCfmIAqe29dyWVglDiRt9k-e2) | ![Monitors](https://drive.google.com/uc?export=view&id=1a30LPrw-qrczhC50gnNNt19KvncTpGJJ) |
+|:---:|:---:|:---:|
+| Custom PC Builds | MacBooks | Monitors |
+
+![Chatbot Home](https://drive.google.com/uc?export=view&id=1xcRIELXHW2wEugjPumZbLRPA2OpOcoHT)
+
+---
+
+## Demo
+
+### Full Walkthrough Video
+
+[![PC Hardware Advisor - Full Demo](https://cdn.loom.com/sessions/thumbnails/8293d333ed014db49a561494f451f396-with-play.gif)](https://www.loom.com/share/8293d333ed014db49a561494f451f396)
+
+> Click the image above to watch the full demo on Loom.
+
+---
+
+The following clips walk through the core user journey, from telling the advisor what you want through to placing your order.
+
+> ⚠️ These recordings are from an early prototype. Some rough edges and bugs are visible and are being addressed. See [Roadmap](#roadmap).
+
+---
+
+### 1. Tell It What You Want
+
+Users simply describe what they are looking for in natural language - budget, use case, preferences. No forms, no dropdowns. The advisor handles the rest.
+
+![User defines hardware build](https://drive.google.com/uc?export=view&id=1o1jfFSNZUAQVNQa39XBFTa7nQRYA_X4n)
+
+---
+
+### 2. Compare AI-Generated Builds
+
+The advisor returns one to four complete builds tailored to the user's input. Every build has been automatically checked for component compatibility (socket, RAM type, GPU clearance, PSU wattage) and benchmarked against best-fit options for the stated use case.
+
+![Compare builds](https://drive.google.com/uc?export=view&id=1GduCbelZHWrTNPb9KohLnBevdvHmcCT2)
+
+---
+
+### 3. Customise Any Part
+
+Not happy with a specific component? Users can swap out any part in any build. The advisor presents curated alternatives with full specs and compatibility already verified.
+
+![Pick your PC parts](https://drive.google.com/uc?export=view&id=1dNLJpgowhNyfakvsWVtrmZrrPHQQaum8)
+
+---
+
+### 4. Buy Your Build
+
+When the user is happy with their chosen build, they simply type **"buy my build"** (or select the option when prompted). Direct purchase links to trusted retailers are generated on the spot.
+
+![Buy your build](https://drive.google.com/uc?export=view&id=1FXZCWjF3pv_c_cyjS6kfRz5G9obS1A3a)
 
 ---
 
@@ -48,15 +107,15 @@ It doesn't just recommend — it **builds with you**. A guided PC configurator a
 - Scope-aware: politely refuses off-topic questions
 
 ### 🔧 PC Configurator (Two Modes)
-- **"Build it for me"** — 9 guided questions → 1–4 complete builds generated
-- **"I'll build it myself"** — Step-by-step component selection with 2–4 options per slot
+- **"Build it for me"** - 9 guided questions leading to 1 to 4 complete builds generated
+- **"I'll build it myself"** - Step-by-step component selection with 2 to 4 options per slot
 - Automatic compatibility checking (socket, RAM type, GPU clearance, PSU wattage)
 - Full build tables with 10 components, key specs, and estimated pricing
 
 ### 🎬 YouTube Integration
 - Timestamp links jump directly to the relevant moment in a review
 - Corpus spans 5 years of content from major hardware channels
-- Semantic search — finds relevant reviews even when wording differs
+- Semantic search finds relevant reviews even when wording differs
 
 ### 📊 Structured Output
 - Performance metric bars (Gaming, Productivity, Noise Level)
@@ -163,7 +222,7 @@ pc-hardware-advisor/
 - Google Colab account (with GPU runtime recommended)
 - OpenAI API key
 - SerpAPI key (free tier: 100 searches/month)
-- LangSmith account (EU endpoint) — optional, for evaluation
+- LangSmith account (EU endpoint) - optional, for evaluation
 - ngrok account + auth token (free tier)
 
 ### 1. Clone the Repository
@@ -274,10 +333,10 @@ Evaluated using **LangSmith** with 25 curated test cases and 7 automated evaluat
 The agent can call `pc_transcript_search` (YouTube corpus) and `web_search_product` (live web) as needed. Setting `tool_choice="auto"` lets it answer simple questions directly while searching for hardware queries.
 
 ### 2. 877-Line System Prompt
-The entire configurator flow — two modes, 9 guided questions, build table format, compatibility rules, vendor links — is controlled by a single system prompt. No additional backend state machine code required.
+The entire configurator flow - two modes, 9 guided questions, build table format, compatibility rules, vendor links - is controlled by a single system prompt. No additional backend state machine code required.
 
 ### 3. Two-Layer Memory
-- **Layer 1:** `ConversationBufferWindowMemory(k=10)` — keeps chat history
+- **Layer 1:** `ConversationBufferWindowMemory(k=10)` keeps chat history
 - **Layer 2:** Configurator state injected into the system prompt on every turn via `rebuild_agent_with_state()`
 
 ### 4. Semantic Search over Keyword Search
@@ -285,25 +344,46 @@ ChromaDB with OpenAI embeddings finds relevant content even when wording differs
 
 ---
 
-## Demo
+## Roadmap
 
-### Guided Build Flow
-1. "I want to build a gaming PC for €1,200"
-2. Agent activates configurator → asks 9 guided questions
-3. Generates 2 complete builds with full specs, prices, and buy links
+This project is a working prototype with several known areas for improvement. The following developments are planned:
 
-### Quick Hardware Question
-1. "What's the best GPU for 1440p gaming under €400?"
-2. Returns option cards with specs, metrics, YouTube timestamps
+### 🐛 Stability & Performance
+- Fix known bugs across the configurator and chat flows
+- Refine the system prompt for more consistent, higher-quality output
+- Improve agent response speed and reliability
 
-### Scope Handling
-1. "What's the best restaurant in Barcelona?"
-2. Agent politely redirects: "I focus on PC hardware..."
+### 📚 Corpus Overhaul
+- Remove all YouTube creator content from the knowledge base
+- Replace with clean, factual PC hardware documentation and specifications
+- Integrate curated, free-to-use customer service and support scripts for a legally sound data foundation
+
+### 🤖 Architecture Upgrade
+- Explore a **multi-agent model** to replace the current single-agent approach, separating concerns such as retrieval, build generation, compatibility checking, and purchasing into dedicated agents for improved efficiency, maintainability, and safety
+
+### 🎨 UI/UX Improvements
+- Redesign the chat interface for a more polished, user-friendly experience
+- Improve build card layout, part picker clarity, and mobile responsiveness
+
+### 🔩 Step-by-Step Build Guide
+- Add a post-purchase assembly companion: once a user has their parts, the advisor walks them through the physical build process step by step
+- No prior PC building experience required - the advisor handles the technical guidance throughout
 
 ---
 
 ## Author
 
+**Benjamin Hunt**
+Ironhack AI Engineering Bootcamp - March 2026
+
+- GitHub: [github.com/benhuntdev](https://github.com/benhuntdev)
+- Project: [PC Hardware Advisor](https://github.com/benhuntdev/PC_Hardware_Advisor_Project)
+
+---
+
+## License
+
+This project is for educational purposes as part of the Ironhack AI Engineering Bootcamp 2026.
 **Benjamin Hunt**
 Ironhack AI Engineering Bootcamp — March 2026
 
