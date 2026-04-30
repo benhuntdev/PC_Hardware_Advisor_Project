@@ -42,11 +42,11 @@ It doesn't just recommend - it **builds with you**. A guided PC configurator ask
 
 The advisor covers a wide range of hardware needs:
 
-| ![PCs](https://drive.google.com/uc?export=view&id=1P1TX_SDHMHwppCMpvSgHRdAEQG0TowL4) | ![MacBooks](https://drive.google.com/uc?export=view&id=1Y5qjwe4aCfmIAqe29dyWVglDiRt9k-e2) | ![Monitors](https://drive.google.com/uc?export=view&id=1a30LPrw-qrczhC50gnNNt19KvncTpGJJ) |
+| ![PCs](assets/images/pcs.png) | ![MacBooks](assets/images/macbooks.png) | ![Monitors](assets/images/monitors.png) |
 |:---:|:---:|:---:|
 | Custom PC Builds | MacBooks | Monitors |
 
-![Chatbot Home](https://drive.google.com/uc?export=view&id=1xcRIELXHW2wEugjPumZbLRPA2OpOcoHT)
+![Chatbot Home](assets/images/chatbot_home.png)
 
 ---
 
@@ -70,7 +70,7 @@ The following clips walk through the core user journey, from telling the advisor
 
 Users simply describe what they are looking for in natural language - budget, use case, preferences. No forms, no dropdowns. The advisor handles the rest.
 
-![User defines hardware build](https://drive.google.com/uc?export=view&id=1o1jfFSNZUAQVNQa39XBFTa7nQRYA_X4n)
+![User defines hardware build](assets/gifs/User_define_hardware_builds.gif)
 
 ---
 
@@ -78,7 +78,7 @@ Users simply describe what they are looking for in natural language - budget, us
 
 The advisor returns one to four complete builds tailored to the user's input. Every build has been automatically checked for component compatibility (socket, RAM type, GPU clearance, PSU wattage) and benchmarked against best-fit options for the stated use case.
 
-![Compare builds](https://drive.google.com/uc?export=view&id=1GduCbelZHWrTNPb9KohLnBevdvHmcCT2)
+![Compare builds](assets/gifs/compare_builds.gif)
 
 ---
 
@@ -86,7 +86,7 @@ The advisor returns one to four complete builds tailored to the user's input. Ev
 
 Not happy with a specific component? Users can swap out any part in any build. The advisor presents curated alternatives with full specs and compatibility already verified.
 
-![Pick your PC parts](https://drive.google.com/uc?export=view&id=1dNLJpgowhNyfakvsWVtrmZrrPHQQaum8)
+![Pick your PC parts](assets/gifs/Pick_Your_PC_Parts.gif)
 
 ---
 
@@ -94,7 +94,7 @@ Not happy with a specific component? Users can swap out any part in any build. T
 
 When the user is happy with their chosen build, they simply type **"buy my build"** (or select the option when prompted). Direct purchase links to trusted retailers are generated on the spot.
 
-![Buy your build](https://drive.google.com/uc?export=view&id=1FXZCWjF3pv_c_cyjS6kfRz5G9obS1A3a)
+![Buy your build](assets/gifs/Buy_Your_Build.gif)
 
 ---
 
@@ -181,6 +181,18 @@ When the user is happy with their chosen build, they simply type **"buy my build
 pc-hardware-advisor/
 │
 ├── PCHardwareAgent_v2.ipynb    # Main notebook (agent, API, evaluation)
+│
+├── assets/                      # README media
+│   ├── gifs/
+│   │   ├── User_define_hardware_builds.gif
+│   │   ├── compare_builds.gif
+│   │   ├── Pick_Your_PC_Parts.gif
+│   │   └── Buy_Your_Build.gif
+│   └── images/
+│       ├── pcs.png
+│       ├── macbooks.png
+│       ├── monitors.png
+│       └── chatbot_home.png
 │
 ├── data/                        # Chunked transcript CSVs
 │   ├── gpu_reviews_chunked.csv
@@ -378,14 +390,6 @@ Ironhack AI Engineering Bootcamp - March 2026
 
 - GitHub: [github.com/benhuntdev](https://github.com/benhuntdev)
 - Project: [PC Hardware Advisor](https://github.com/benhuntdev/PC_Hardware_Advisor_Project)
-
----
-
-## License
-
-This project is for educational purposes as part of the Ironhack AI Engineering Bootcamp 2026.
-**Benjamin Hunt**
-Ironhack AI Engineering Bootcamp — March 2026
 
 ---
 
